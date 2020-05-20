@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Single-Assignment Store | Enqueue Zero</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="Enqueue Zero is publishing code principles.">
+    <link rel="preload" href="/assets/css/0.styles.37721fd6.css" as="style"><link rel="preload" href="/assets/js/app.8a014454.js" as="script"><link rel="preload" href="/assets/js/6.380ebf0c.js" as="script"><link rel="preload" href="/assets/js/99.59a5d717.js" as="script"><link rel="prefetch" href="/assets/js/1.a0911686.js"><link rel="prefetch" href="/assets/js/10.0075fcb2.js"><link rel="prefetch" href="/assets/js/100.42bc022c.js"><link rel="prefetch" href="/assets/js/101.b5e0d1ff.js"><link rel="prefetch" href="/assets/js/102.5cd0372e.js"><link rel="prefetch" href="/assets/js/103.2f56b9a2.js"><link rel="prefetch" href="/assets/js/104.b906318a.js"><link rel="prefetch" href="/assets/js/105.1fe22608.js"><link rel="prefetch" href="/assets/js/106.6ba1f7a3.js"><link rel="prefetch" href="/assets/js/107.58b48b14.js"><link rel="prefetch" href="/assets/js/108.7e984ecf.js"><link rel="prefetch" href="/assets/js/109.e0004694.js"><link rel="prefetch" href="/assets/js/11.87112945.js"><link rel="prefetch" href="/assets/js/110.b2b6620a.js"><link rel="prefetch" href="/assets/js/111.b48f79e5.js"><link rel="prefetch" href="/assets/js/112.466e709c.js"><link rel="prefetch" href="/assets/js/113.208a2737.js"><link rel="prefetch" href="/assets/js/114.227a0d44.js"><link rel="prefetch" href="/assets/js/115.179d320d.js"><link rel="prefetch" href="/assets/js/116.e552502b.js"><link rel="prefetch" href="/assets/js/117.2e793a2e.js"><link rel="prefetch" href="/assets/js/118.5cf3469f.js"><link rel="prefetch" href="/assets/js/119.e7a59f0e.js"><link rel="prefetch" href="/assets/js/12.3194c411.js"><link rel="prefetch" href="/assets/js/120.3c24bf29.js"><link rel="prefetch" href="/assets/js/121.4aad114e.js"><link rel="prefetch" href="/assets/js/122.5ac2fbfd.js"><link rel="prefetch" href="/assets/js/123.00a16ced.js"><link rel="prefetch" href="/assets/js/124.7a192518.js"><link rel="prefetch" href="/assets/js/125.a389df67.js"><link rel="prefetch" href="/assets/js/126.59ff386d.js"><link rel="prefetch" href="/assets/js/127.d43ed00e.js"><link rel="prefetch" href="/assets/js/128.04aab893.js"><link rel="prefetch" href="/assets/js/129.74b61043.js"><link rel="prefetch" href="/assets/js/13.aa511a98.js"><link rel="prefetch" href="/assets/js/130.11e6bf44.js"><link rel="prefetch" href="/assets/js/131.4ba23f16.js"><link rel="prefetch" href="/assets/js/132.a4cd5a4f.js"><link rel="prefetch" href="/assets/js/133.f757e0ea.js"><link rel="prefetch" href="/assets/js/134.ccc1acbe.js"><link rel="prefetch" href="/assets/js/135.0b340036.js"><link rel="prefetch" href="/assets/js/136.6a2b526d.js"><link rel="prefetch" href="/assets/js/137.7278924e.js"><link rel="prefetch" href="/assets/js/138.cc13abd3.js"><link rel="prefetch" href="/assets/js/139.a37dad43.js"><link rel="prefetch" href="/assets/js/14.606d1bea.js"><link rel="prefetch" href="/assets/js/140.dce414c6.js"><link rel="prefetch" href="/assets/js/141.5b3e3c52.js"><link rel="prefetch" href="/assets/js/142.02e22853.js"><link rel="prefetch" href="/assets/js/143.408cf7c6.js"><link rel="prefetch" href="/assets/js/144.d353197c.js"><link rel="prefetch" href="/assets/js/145.19c6f3b8.js"><link rel="prefetch" href="/assets/js/146.4f50e4aa.js"><link rel="prefetch" href="/assets/js/147.23b74e9d.js"><link rel="prefetch" href="/assets/js/148.cc825d0e.js"><link rel="prefetch" href="/assets/js/149.90528015.js"><link rel="prefetch" href="/assets/js/15.8a347078.js"><link rel="prefetch" href="/assets/js/150.1feaca29.js"><link rel="prefetch" href="/assets/js/151.391bde22.js"><link rel="prefetch" href="/assets/js/152.1189a205.js"><link rel="prefetch" href="/assets/js/153.8bca6ae4.js"><link rel="prefetch" href="/assets/js/154.38c5c333.js"><link rel="prefetch" href="/assets/js/155.ef1ced73.js"><link rel="prefetch" href="/assets/js/156.cb2a7e0b.js"><link rel="prefetch" href="/assets/js/157.31638f3f.js"><link rel="prefetch" href="/assets/js/16.0f6060a6.js"><link rel="prefetch" href="/assets/js/17.5abc0ba6.js"><link rel="prefetch" href="/assets/js/18.c1c32db5.js"><link rel="prefetch" href="/assets/js/19.d86bf541.js"><link rel="prefetch" href="/assets/js/2.e6287f9c.js"><link rel="prefetch" href="/assets/js/20.761042d8.js"><link rel="prefetch" href="/assets/js/21.989f5a9d.js"><link rel="prefetch" href="/assets/js/22.ddfd889e.js"><link rel="prefetch" href="/assets/js/23.954d5189.js"><link rel="prefetch" href="/assets/js/24.815f547b.js"><link rel="prefetch" href="/assets/js/25.41f44cc8.js"><link rel="prefetch" href="/assets/js/26.fd330669.js"><link rel="prefetch" href="/assets/js/27.0a33f2cb.js"><link rel="prefetch" href="/assets/js/28.063bdb86.js"><link rel="prefetch" href="/assets/js/29.12412ca6.js"><link rel="prefetch" href="/assets/js/3.43c489b4.js"><link rel="prefetch" href="/assets/js/30.6d89c355.js"><link rel="prefetch" href="/assets/js/31.654806be.js"><link rel="prefetch" href="/assets/js/32.f97c7796.js"><link rel="prefetch" href="/assets/js/33.25016491.js"><link rel="prefetch" href="/assets/js/34.39e1a4d3.js"><link rel="prefetch" href="/assets/js/35.f144b75a.js"><link rel="prefetch" href="/assets/js/36.2072f100.js"><link rel="prefetch" href="/assets/js/37.9db4d157.js"><link rel="prefetch" href="/assets/js/38.2fc02702.js"><link rel="prefetch" href="/assets/js/39.4f58eb84.js"><link rel="prefetch" href="/assets/js/4.ec4bace7.js"><link rel="prefetch" href="/assets/js/40.b6bf4a2a.js"><link rel="prefetch" href="/assets/js/41.e72abba2.js"><link rel="prefetch" href="/assets/js/42.18b55462.js"><link rel="prefetch" href="/assets/js/43.e619a537.js"><link rel="prefetch" href="/assets/js/44.4bf91d97.js"><link rel="prefetch" href="/assets/js/45.292c54fe.js"><link rel="prefetch" href="/assets/js/46.359760e9.js"><link rel="prefetch" href="/assets/js/47.6f95684b.js"><link rel="prefetch" href="/assets/js/48.a43b234f.js"><link rel="prefetch" href="/assets/js/49.bab06cb1.js"><link rel="prefetch" href="/assets/js/50.7e676799.js"><link rel="prefetch" href="/assets/js/51.8ee22d62.js"><link rel="prefetch" href="/assets/js/52.d0b66642.js"><link rel="prefetch" href="/assets/js/53.bd5b8800.js"><link rel="prefetch" href="/assets/js/54.b3263fcc.js"><link rel="prefetch" href="/assets/js/55.b371c470.js"><link rel="prefetch" href="/assets/js/56.767f6203.js"><link rel="prefetch" href="/assets/js/57.7b57b5f4.js"><link rel="prefetch" href="/assets/js/58.8d89c11d.js"><link rel="prefetch" href="/assets/js/59.6d290e0c.js"><link rel="prefetch" href="/assets/js/60.1eb587b1.js"><link rel="prefetch" href="/assets/js/61.e9825356.js"><link rel="prefetch" href="/assets/js/62.0775899f.js"><link rel="prefetch" href="/assets/js/63.3d15725e.js"><link rel="prefetch" href="/assets/js/64.b7f8bf70.js"><link rel="prefetch" href="/assets/js/65.c868ff2e.js"><link rel="prefetch" href="/assets/js/66.80d45b6f.js"><link rel="prefetch" href="/assets/js/67.7eae91af.js"><link rel="prefetch" href="/assets/js/68.06a2d949.js"><link rel="prefetch" href="/assets/js/69.6355d227.js"><link rel="prefetch" href="/assets/js/7.eb8586b2.js"><link rel="prefetch" href="/assets/js/70.ff5e753b.js"><link rel="prefetch" href="/assets/js/71.f8e194e0.js"><link rel="prefetch" href="/assets/js/72.b9e0fc68.js"><link rel="prefetch" href="/assets/js/73.b5a5c5eb.js"><link rel="prefetch" href="/assets/js/74.ac1861f3.js"><link rel="prefetch" href="/assets/js/75.3e34dc1f.js"><link rel="prefetch" href="/assets/js/76.3716ac5c.js"><link rel="prefetch" href="/assets/js/77.079e4dd1.js"><link rel="prefetch" href="/assets/js/78.c74297eb.js"><link rel="prefetch" href="/assets/js/79.20644c6e.js"><link rel="prefetch" href="/assets/js/8.222ab8c9.js"><link rel="prefetch" href="/assets/js/80.33a49e3b.js"><link rel="prefetch" href="/assets/js/81.4c52369c.js"><link rel="prefetch" href="/assets/js/82.89bcef8d.js"><link rel="prefetch" href="/assets/js/83.955b67dc.js"><link rel="prefetch" href="/assets/js/84.d46726d5.js"><link rel="prefetch" href="/assets/js/85.6e178f6d.js"><link rel="prefetch" href="/assets/js/86.7b7f0a9a.js"><link rel="prefetch" href="/assets/js/87.0188af37.js"><link rel="prefetch" href="/assets/js/88.cc1da146.js"><link rel="prefetch" href="/assets/js/89.e13c8934.js"><link rel="prefetch" href="/assets/js/9.82d4a22b.js"><link rel="prefetch" href="/assets/js/90.9b330d8e.js"><link rel="prefetch" href="/assets/js/91.38af1274.js"><link rel="prefetch" href="/assets/js/92.612b2e49.js"><link rel="prefetch" href="/assets/js/93.6ee43dc4.js"><link rel="prefetch" href="/assets/js/94.e73a2469.js"><link rel="prefetch" href="/assets/js/95.dbbc0dad.js"><link rel="prefetch" href="/assets/js/96.dd16c729.js"><link rel="prefetch" href="/assets/js/97.cc5c3f8c.js"><link rel="prefetch" href="/assets/js/98.cbd15221.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.37721fd6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Enqueue Zero</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/soasme/enqueuezero" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/soasme/enqueuezero" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="introduction"><a href="#introduction" class="header-anchor">#</a> Introduction</h2> <p>Single-Assignment Store is a set of variables that are initially unbound and that can be bound to ONE AND ONLY ONE value in their lifetime. In book &quot;<a href="https://www.goodreads.com/book/show/772585.Concepts_Techniques_and_Models_of_Computer_Programming" target="_blank" rel="noopener noreferrer">Concepts, Techniques, and Models of Computer Programming<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>&quot;, it's the fundamental element in the declarative model. We call it <code>store</code> in the rest of the article. Below thoughts are about implementing single-assignment store that introduced in the book chapter 2.</p> <h2 id="data-structures"><a href="#data-structures" class="header-anchor">#</a> Data Structures</h2> <p>To implement such store, we first need to design basic data structure of variables. Then, we need to create container data structures. Next, we need to implement unification and entailment. Once all of these are implemented, we'll get a working single-assignment store. Garbage collection is an optional add-on. We'll use <a href="https://github.com/orangeduck/tgc" target="_blank" rel="noopener noreferrer">https://github.com/orangeduck/tgc<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> for memory management.</p> <h3 id="store-node"><a href="#store-node" class="header-anchor">#</a> Store Node</h3> <p>A <code>store_node_t</code> is a two-elements struct. The first element indicates its type. The second element is a pointer to its real value. Such struct represents a variable in a single-assignment store, or as known as dataflow variable or declarative variable.</p> <div class="language- extra-class"><pre><code>typedef enum {
+  UNBOUND_TYPE,
+  // ... (other types)
+} store_node_type_t;
+
+typedef void* store_node_value_t; 
+
+typedef struct store_node_t {
+  store_node_type_t type;
+  store_node_value_t value;
+} store_node_t;
+</code></pre></div><h3 id="unbound-store-node"><a href="#unbound-store-node" class="header-anchor">#</a> Unbound Store Node</h3> <p>Once initialized with <code>type=UNBOUND_TYPE</code> by <code>malloc</code> , it can be bound to any other types.  Once bound to one of the other types, it cannot bound to other types; otherwise, an error occurs. The given two rules satisfy an important property of the store: once bound, a declarative variable stays bound throughout the computation and is indistinguishable from its value.</p> <p>Assume we have a type <code>store_error_t</code> for capturing errors, and function <code>store_bind_intval</code> for binding integer values. Below examples shows the first <code>store_bind_intval</code> call sets node type to INT_TYPE and node value to 1, while the second <code>store_bind_intval</code> call does nothing except setting an error.</p> <div class="language- extra-class"><pre><code>store_node_t* node = (store_not_t)*malloc(sizeof(store_not_t))
+node-&gt;type = UNBOUND_TYPE;
+node-&gt;value = NULL;
+
+store_error_t error = STORE_NO_ERROR;
+
+store_bind_intval(node, 1, &amp;error);
+printf(&quot;%ld\n&quot;, (long)(node-&gt;value)); // should print 1.
+
+store_bind_intval(node, 2, &amp;error);
+printf(&quot;%ld %ld\n&quot;, error, (long)(node-&gt;value)); // should still print 1.
+</code></pre></div><p>To sum up, in out implementation, an unbound store node has below information in the <code>store_node_t</code> struct:</p> <ul><li>Its type is <code>UNBOUND_TYPE</code>.</li> <li>Its value is <code>NULL</code>.</li></ul> <h3 id="int-store-node"><a href="#int-store-node" class="header-anchor">#</a> Int Store Node</h3> <p>Without the integer type, we are unable to perform basic calculations (or at least, very hard). We can extend <code>store_node_type_t</code> by adding one more type: <code>INT_TYPE</code>.</p> <div class="language- extra-class"><pre><code>typedef enum {
+  UNBOUND_TYPE,
+  INT_TYPE, /* This is the new type we just added. */
+  // ... (other types)
+} store_node_type_t;
+</code></pre></div><p>One more thing, we need <code>store_error_t</code> to indicate an error occurring on binding. It can also be an enum.</p> <div class="language- extra-class"><pre><code>typedef enum {
+  STORE_NO_ERROR,
+  STORE_ALREADY_BOUND_ERROR,
+} store_error_t;
+</code></pre></div><p>Binding a integer can be quite simple - change the type to <code>INT_TYPE</code> and modify the value. We could have allocated a new memory and set the <code>value</code> to the pointer of the new address. However, it's insufficient; the value field can fit in a long value. This also means we added an upper bound to the maximum value we can have; it's 2^32 on a 32bit machine and 2^64 one a 64bit machine.</p> <h3 id="str-store-node"><a href="#str-store-node" class="header-anchor">#</a> Str Store Node</h3> <p>Similarly, to support str store node, we add a new type <code>STR_TYPE</code> .</p> <div class="language- extra-class"><pre><code>typedef enum {
+  UNBOUND_TYPE,
+  INT_TYPE,
+  STR_TYPE, /* This is the new type we just added. */
+  // ... (other types)
+} store_node_type_t;
+</code></pre></div><p>Then, since it's impossible to store a string on a <code>store_node_value_t</code> field, we need to allocate a string somewhere else and store the pointer to the string to <code>store_node_value_t</code>. Below is an example implementation using <a href="https://github.com/antirez/sds" target="_blank" rel="noopener noreferrer">https://github.com/antirez/sds<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <div class="language- extra-class"><pre><code>store_node_t* node = (store_node_t)*malloc(sizeof(store_node_t));
+sds s = sdsnew(&quot;hello world&quot;)
+node-&gt;type = STR_TYPE;
+node-&gt;value = s[-1];
+
+unsigned char sds_header = node-&gt;value;
+sds p = node-&gt;value[1];
+printf(&quot;size=%ld, str=%s\n&quot;, sdslen(p), p);
+</code></pre></div><p>By introducing the pointer into store_node_t, we need to somehow automatically do garbage collection.</p> <p>Such design leaves us a problem; what if two store nodes point to two string but with same value?</p> <h3 id="tuple-store-node"><a href="#tuple-store-node" class="header-anchor">#</a> Tuple Store Node</h3> <p>Tuple is a container store node that has a fixed number of pointers to other store nodes. Similar to str store node, we add a new type <code>TUPLE_TYPE</code> , allocate a tuple struct, and point value to the tuple.</p> <div class="language- extra-class"><pre><code>typedef struct tuple_t {
+  size_t size;
+  store_node_t** elements;
+} tuple_t;
+
+typedef enum {
+  UNBOUND_TYPE,
+  INT_TYPE,
+  STR_TYPE,
+  TUPLE_TYPE, /* This is the new type we just added. */
+  // ... (other types)
+} store_node_type_t;
+
+printf(&quot;&gt;&gt;&gt; let T = tuple(I S)\n&quot;);
+store_node_error_t merr_tuple_word = WORD_NO_ERROR;
+store_node_t* tuple_node = new_store_node(UNBOUND_WORD, NULL);
+store_node_t* tuple_elements[] = { int_word, str_node };
+set_store_node_tupleval(
+    tuple_node,
+    2,
+    tuple_elements,
+    &amp;merr_tuple_word
+);
+</code></pre></div><p>It's getting more and more complicated, but so far, the strategy is just the same as the implementation of str store node.</p> <h3 id="list-store-node"><a href="#list-store-node" class="header-anchor">#</a> List Store Node</h3> <p>Based on the tuple store node, we can turn it into various types, such as list! A list can be a linked-list tuple, the element of which has two sub-element: car and cdr, and such element is so called cons. <a href="https://www.math.utah.edu/docs/info/emacs-lisp-intro_8.html" target="_blank" rel="noopener noreferrer">https://www.math.utah.edu/docs/info/emacs-lisp-intro_8.html<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>We don't need to implement anything yet since the underlying data structure of list store node is the same as tuple store node.</p> <div class="language- extra-class"><pre><code>store_node_t* node = (store_node_t)*malloc(sizeof(store_node_t));
+node-&gt;type = TUPLE_TYPE,
+size_t size = 2;
+node-&gt;value = (void*)malloc(sizeof(tuple_t)+sizeof(store_node_t)*size);
+tuple_t* tuple = (tuple_t*)node-&gt;value;
+tuple-&gt;size = size;
+// the first tuple element becomes car, or head.
+tuple-&gt;nodes[0]-&gt;type = INT_TYPE;
+tuple-&gt;nodes[0]-&gt;value = 0;
+// the second tuple element becomes cdr, or tail.
+tuple-&gt;nodes[1]-&gt;type = TUPLE_TYPE;
+// ...
+</code></pre></div><h3 id="partial-store-node"><a href="#partial-store-node" class="header-anchor">#</a> Partial Store Node</h3> <p>Inside the tuple store node, it's possible that one of the tuple element is still an unbound store node, meaning the tuple element has UNBOUND_TYPE as its type. It's completely legitimate in our case. In declarative model, this tuple is so called partial variable. The afterward code will use <code>=</code> operator unifying two variables, making all partial variables inside a tuple being bound to a deterministic type. For example, <code>X = (1 2); Y = (1 Z); X = Y</code> makes Z=2 and Y=(1 2).</p> <p>Still though, there is nothing we need to implement so far as partial store node is just a vanilla tuple store node with some unbound store node elements.</p> <p>Considering two variables point to each other: <code>X = (Y); Y = (Z)</code> , the unification <code>X = Y</code> makes the variable y and z to be the same, yet they're still partial values. Previously, we define <code>node-&gt;value = NULL</code> when <code>node-&gt;type == UNBOUND_TYPE</code> . But we need to add some adjustments to this behavior. It's clear that when the type is unbound, it makes sense to point the value to something so that we can tell the identity of the value. Such thing is called an equivalence set in declarative model. To implement it, we need a new data structure <code>store_equivalence_set_t</code>, which can be a linked-list.</p> <div class="language- extra-class"><pre><code>typedef struct store_equivalence_node_t {
+    store_node_t* node;
+    struct store_equivalence_node_t* prev;
+    struct store_equivalence_node_t* next;
+} store_equivalence_node_t;
+</code></pre></div><p>The pointers between multiple store nodes in the equivalence set has below shape ( <code>X = Y = Z</code>).</p> <p>Each store node's type is still UNBOUND_TYPE, but the value will point to a same ES (equivalence set) linked list. Each ES node point to a store node. When any one of store node is bound to a value, then we can find out all the other store nodes and bind them to the same value.</p> <h2 id="unification-and-entailment"><a href="#unification-and-entailment" class="header-anchor">#</a> Unification and Entailment</h2> <p>As shown in above example, <code>X = Y</code> is called unification. It's also an important operation in logical programming.</p> <p>The goal of unification, as stated in Partial Store Node section, is to set types and values for unbound store node. A special case is, an error will occur when two variables are not match, for example, <code>X = (1, 2); Y = (1, Z, 3); X = Y</code> is wrong.</p> <p>The rule of unification is simple: if either store_node is unbound, we unify them. If both store nodes are unbound, we create an equivalence set for them.</p> <div class="language- extra-class"><pre><code>void
+store_bind(store_node_t* left, store_node_t* right, store_node_error_t* error) {
+    if (left-&gt;type == UNBOUND_WORD &amp;&amp; right-&gt;type == UNBOUND_WORD) {
+        store_bind_equivalence_set_nodes(left, right, error);
+    } else if (left-&gt;type == UNBOUND_WORD &amp;&amp; right-&gt;type != UNBOUND_WORD) {
+        store_unify_unbound_node(left, right);
+    } else if (left-&gt;type != UNBOUND_WORD &amp;&amp; right-&gt;type == UNBOUND_WORD) {
+        store_unify_unbound_node(right, left);
+    } else if (left-&gt;type != UNBOUND_WORD &amp;&amp; right-&gt;type != UNBOUND_WORD) {
+        *error = WORD_CONFLICT_ERROR;
+    }
+}
+</code></pre></div><p>Creating equivalence set is by iterating through the double linked-list.</p> <div class="language- extra-class"><pre><code>void
+store_bind_equivalence_set_nodes(store_node_t* left,
+        store_node_t* right,
+        store_node_error_t* error) {
+
+    store_equivalence_node_t* resn = (store_equivalence_node_t*) right-&gt;value;
+    store_equivalence_node_t* resn_leftmost = resn;
+    while(resn_leftmost-&gt;prev != NULL) {
+        resn_leftmost = resn_leftmost-&gt;prev;
+    }
+
+    store_equivalence_node_t* lesn = (store_equivalence_node_t*) left-&gt;value;
+    store_equivalence_node_t* lesn_rightmost = lesn;
+    while(resn_leftmost-&gt;next != NULL) {
+        resn_leftmost = resn_leftmost-&gt;next;
+    }
+
+    resn_leftmost-&gt;prev = lesn_rightmost;
+    lesn_rightmost-&gt;next = resn_leftmost;
+}
+</code></pre></div><p>Unifying values in the equivalence set is by pointing node values to the determined node.</p> <div class="language- extra-class"><pre><code>void
+store_unify_unbound_node(store_node_t* unbound, store_node_t* bound) {
+    store_equivalence_node_t* es = (store_equivalence_node_t*) unbound-&gt;value;
+    es = es-&gt;prev;
+    while (es != NULL) {
+        es-&gt;node-&gt;type = bound-&gt;type;
+        es-&gt;node-&gt;value = bound-&gt;value;
+        es = es-&gt;prev;
+    }
+
+    es = (store_equivalence_node_t*) unbound-&gt;value;
+    while (es != NULL) {
+        es-&gt;node-&gt;type = bound-&gt;type;
+        es-&gt;node-&gt;value = bound-&gt;value;
+        es = es-&gt;next;
+    }
+}
+</code></pre></div><p>Note that we didn't free the nodes explicitly, as we'll introduce garbage collection later.</p> <h3 id="bind-operation"><a href="#bind-operation" class="header-anchor">#</a> Bind operation</h3> <p><code>store_bind(ES, v)</code> binds all variables in the equivalence set ES to the number or record v. For example, the operation <code>store_bind({v1, v2}, node)</code> adds two variables <code>v1</code> and <code>v2</code> to an equivalence set (create an ES if not exists).</p> <p><code>store_merge(ES1, ES2)</code> merge ES2 into ES1. It points the nodes' values to the head of ES1, and makes each newly added element pointing back to nodes.</p> <p>Below is an example translation of declarative code to C code.</p> <div class="language- extra-class"><pre><code>printf(&quot;&gt;&gt;&gt; declare X Z\n&quot;);
+store_node_error_t bind_err = WORD_NO_ERROR;
+store_node_t* x_node = new_store_node(UNBOUND_WORD, NULL);
+store_node_t* z_node = new_store_node(UNBOUND_WORD, NULL);
+
+printf(&quot;&gt;&gt;&gt; X = Z\n&quot;);
+store_bind(x_node, z_node, &amp;bind_err);
+
+printf(&quot;&gt;&gt;&gt; X = S\n&quot;);
+store_bind(str_node, x_node, &amp;bind_err);
+
+printf(&quot;&gt;&gt;&gt; echo(tuple(X Z))\n&quot;);
+printf(&quot;{\&quot;%s\&quot;, \&quot;%s\&quot;}\n&quot;, get_store_node_strval(x_node, &amp;merr_str_node), get_store_node_strval(z_node, &amp;merr_str_node));
+</code></pre></div><h2 id="store-memory-management"><a href="#store-memory-management" class="header-anchor">#</a> Store Memory Management</h2> <p>The implementation of store needs to clean &quot;garbage&quot; values periodically, otherwise, the increasing memory would crash the process.</p> <p>We can use a gc library for memory management. Below is an demo implementation of gc using <code>tgc</code>. By replacing all malloc to <code>gc_malloc</code> calls, we can  benefit from an auto-free style garbage collection. It uses the simplest mark and sweep algorithm. Though it's not the fastest, it works.</p> <div class="language- extra-class"><pre><code>#include &quot;tgc.h&quot;
+
+static tgc_t gc;
+void gc_start(void* stk) { tgc_start(&amp;gc, stk); }
+void gc_run() { tgc_run(&amp;gc); }
+void gc_stop() { tgc_stop(&amp;gc); }
+void* gc_alloc(size_t size) { return tgc_alloc(&amp;gc, size); }
+void* gc_realloc(void* ptr, size_t size) { return tgc_realloc(&amp;gc, ptr, size); }
+void gc_free(void* ptr) { tgc_free(&amp;gc, ptr); }
+</code></pre></div><p>When there is no pointer pointing to a <code>store_node_t</code> , it'll be swept by gc library and hence the memory won't go up forever.</p> <p>By the way, the reason I set str store node value pointer to -1 of sds address is due to the nature of tgc. Sds returns us the pointer of const char *, which is the string part, it leaves the header of the string unpointed by any pointer. From tgc perspective, the entire sds is not pointed by any pointer, so it will be marked as garbage and sweep later. By setting value to -1, we set the pointer to the real head of sds string, so that the string will be retained until the store node is garbage collected.</p> <div class="language- extra-class"><pre><code>sds
+new_strval(const char* value) {
+    void* s = (void*)sdsnew(value);
+    return s-1;
+}
+
+void
+set_store_node_strval(store_node_t* node, const char* value, store_node_error_t* error) {
+    if (node-&gt;type != UNBOUND_WORD) {
+        *error = WORD_CONFLICT_ERROR; return;
+    }
+
+    node-&gt;type = STR_WORD;
+    node-&gt;value = new_strval(value);
+}
+
+sds
+get_store_node_strval(store_node_t* word, store_node_error_t* error) {
+    if (word-&gt;type != STR_WORD) {
+        *error = WORD_TYPE_ERROR; return NULL;
+    }
+
+    return (sds)(word-&gt;value+1);
+}
+</code></pre></div><h2 id="network-transmition"><a href="#network-transmition" class="header-anchor">#</a> Network Transmition</h2> <p>When transmit a store node over network, how to build node on another host or even another process on the same host? All pointers are different as nodes reside in a complete different address space! The solution can be sending serialized full copy of data! It’s impossible to copy a node to another host without some form of translation.</p> <h2 id="conclusion"><a href="#conclusion" class="header-anchor">#</a> Conclusion</h2> <p>Virtual machine approach is a supplement to kernel language approach when understanding the atomic data values. The single-assignment store is the fundamental concept in declarative model. By translating data types from kernel language to C language, we can gain a better understanding of them in memory and hence produce more efficient code.</p> <p>The full source code is hosted on GitHub Gist: <a href="https://gist.github.com/soasme/e9beeae434f5c691e4776765306f3d58" target="_blank" rel="noopener noreferrer">https://gist.github.com/soasme/e9beeae434f5c691e4776765306f3d58<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="references"><a href="#references" class="header-anchor">#</a> References</h2> <p><a href="https://github.com/mozart/mozart2/wiki/Manipulating-Nodes" target="_blank" rel="noopener noreferrer">mozart/mozart2<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://mozart.github.io/mozart-v1/doc-1.4.0/tutorial/node4.html#label25" target="_blank" rel="noopener noreferrer">4 Equality and the Equality Test Operator<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://www.notion.so/57ccd84f6a6d4a4aa84e1c83fff9fbc4" target="_blank" rel="noopener noreferrer">Single-Assignment Store<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="updates"><a href="#updates" class="header-anchor">#</a> Updates</h2> <ul><li>2019-04-15: Published at <a href="https://enqueuezero.com/single-assignment-store.html" target="_blank" rel="noopener noreferrer">enqueuezero.com<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/soasme/enqueuezero/edit/master/concepts/single-assignment-store.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8a014454.js" defer></script><script src="/assets/js/6.380ebf0c.js" defer></script><script src="/assets/js/99.59a5d717.js" defer></script>
+  </body>
+</html>
